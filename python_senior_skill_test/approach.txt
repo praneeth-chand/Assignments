@@ -1,0 +1,15 @@
+taking input from user
+creating emptry stack
+predefining the brackets
+adding values into stack #adds only predefined brackets , numbers and operators are excluded
+converting stack into string
+creating a empty string for validation
+iterating for loop over the length if stack:
+	iterating the for loop for i+1 to odd places:
+		if element in stack is equals to ascii values -1 or -2 of the other elements of stack:
+			appending those into valid stack
+			#hence stack can validated through this 
+if length of stack is equal to twice the length of valid stack since the valid stack contains only opening brackets:
+	print valid
+else:
+	print invalid
