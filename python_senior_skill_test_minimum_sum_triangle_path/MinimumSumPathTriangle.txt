@@ -1,0 +1,50 @@
+Minimum Sum Path in a Triangle
+Given a triangular structure of numbers, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+Sample Input and output: 
+   2
+  3 7
+ 8 5 6
+6 1 9 3
+Output : 11
+Explanation : 2 + 3 + 5 + 1 = 11
+
+Input :
+
+   3
+  6 4
+ 5 2 7
+9 1 8 6
+Output : 10
+Explanation : 3 + 4 + 2 + 1 = 10
+
+Code:
+
+
+def MinimumSumPathTriangle(triangle):
+      for length in range(len(triangle)-2,-1,-1):
+        for index in range(len(triangle[length])):
+          triangle[length][index] += min(triangle[length+1][index],triangle[length+1][index+1])
+          
+      print(triangle)
+      return triangle[0][0]
+
+triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+print(MinimumSumPathTriangle(triangle))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

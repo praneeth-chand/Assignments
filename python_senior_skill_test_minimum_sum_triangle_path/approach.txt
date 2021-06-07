@@ -1,0 +1,48 @@
+defining the function MinimumSumPathTriangle which take triangle list as parameter:
+	iterating over for loop desecendingly as the length:
+		iterating over for loop ascendingly as the index over length of the specific row:
+			modifiying the element value with sum of the current value and minimum of the index value and index+1 value 
+	print the modified triangle for reference
+	return the first value of the modified triangle
+
+define the triangle
+print MinimumSumPathTriangle(triangle)
+
+
+     2
+    3 4
+   6 5 7
+  4 1 8 3
+modifying the third row
+     2
+    3 4              #here the element 6 is added with 4 and 1 , minimum of 10 and 7 is 7
+   7 5 7
+  4 1 8 3 
+
+     2
+    3 4
+   7 6 7              #here the element 5 is added with 1 and 8 , minimum of 6 and 13 is 6
+  4 1 8 3
+
+     2
+    3 4
+   7 6 10              #here the element 7 is added with 8 and 3 , minimum of 15 and 10 is 10
+  4 1 8 3
+
+modifying the second row    
+     2
+    9 4                #here the element 3 is added with 7 and 6 , minimum of 10 and 9 is 9
+   7 6 10
+  4 1 8 3
+
+
+     2
+    9 10                #here the element 4 is added with 6 and 9 , minimum of 10 and 13 is 7
+   7 6 10
+  4 1 8 3
+
+Modifying the first row
+     11                    #here the element 2 is added with 9 and 10 , minimum of 11 and 12 is 11
+    9 10
+   7 6 10
+  4 1 8 3
