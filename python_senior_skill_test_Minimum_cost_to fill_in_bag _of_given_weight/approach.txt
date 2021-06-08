@@ -1,0 +1,27 @@
+define weight either taking input or static
+define cost array
+define the kilograms of cost array
+create a empty list as result
+define a function to remove negative weight (which means not available):
+	count number of items which are not availble = cost.count(-1) #since -1 is used to represent the item not available
+	iterating on for loop over the count:
+		finding the index of -1 in cost array
+		removing -1 from cost array throught pop/remove method
+		removing respective kg from kilograms array which is not available in cost
+call the function defined removeNegativeweights by passing the parameters as cost and kilograms array
+
+define minimumcost fuction which takes parameters as weight , cost, kilograms :
+	iterating on for loop to half length of cost array:   #here the loop range is kept half length of cost is because we need only 2 or 3 values from the cost array to satisfy the given weight
+		minimum_price = assign the minimum value of cost
+		kgs_min_price = assign the respective kg value from minimum value of cost
+		find x which is weight // kgs_min_price
+		if x is not equal to zero:
+			append the value of minimum price in result list
+			remove minimum value from the cost array
+			remove respective kg value from kilograms
+		update the weight value            #since we already added the required minimum value 
+	if weight is not equal to zero:
+		return cant buy
+	else:
+		return sum(result)     #since result contains values of minimum cost of the given weight
+call and print the function Minimumcost which takes parameters as weight,cost,kgs
