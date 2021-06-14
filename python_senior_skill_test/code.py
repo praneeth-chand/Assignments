@@ -1,16 +1,20 @@
-def validation(inp):
-    valid_stack=""
-    stack = []
-    op = ["(",")","[","]","{","}"]
-    stack = [x for x in inp if  x.isalnum() == False and x in op]
-    stack="".join(stack)
-    for i in range(len(stack)-1):
-      for j in range(i+1,len(stack),2):
-        if stack[i] == chr(ord(stack[j])-1) or stack[i] == chr(ord(stack[j])-2):
-          valid_stack +=  stack[i]
-    if len(stack) ==2*len(valid_stack):
-      print(valid_stack)
-      return 'valid'
+def expression_validation(input_string):
+    openbrac=['(','[','{']
+    closebrac=[')',']','}']
+    input_expression=[x for x in input_string ]
+    if input_expression == []:
+        return "No brackets are present"
+    validation=[]
+    position=0
+    for i in range(len(input_expression)):
+      if input_expression[i] in openbrac:
+        validation.append(input_expression[i])
+        position+=1
+      elif input_expression[i] in closebrac and validation[-1]== chr(ord(input_expression[i])-1) or validation[-1]== chr(ord(input_expression[i])-2):
+        validation.pop()
+        position+=1
+      
+    if len(validation)== 0 :
+        return 'valid'
     else:
-      return 'invalid'
-           
+        return position,'invalid expression' 
