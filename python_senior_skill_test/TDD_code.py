@@ -3,15 +3,14 @@ from code import *
 
 class Test_ExpVal(unittest.TestCase):
     def test_caseA(self):
-        self.assertEqual(validation('(){'),'invalid')
+        self.assertEqual(expression_validation('(){'),(3,'invalid expression'))
     def test_caseB(self):
-		self.assertEqual(validation('[1+2(ab]'),'invalid')
-    def test_caseC(self):
-		self.assertEqual(validation('[1+2(ab])'),'invalid')
+		self.assertEqual(expression_validation('[(]'),(2,'invalid expression'))
+    
     def test_caseD(self):
-        self.assertEqual(validation('(abc)[{123}]'),'valid')
+        self.assertEqual(expression_validation('()[{}]'),'valid')
     def test_caseE(self):
-		self.assertEqual(validation('[1+2(ab)]'),'valid')
+		self.assertEqual(expression_validation('[()]'),'valid')
         
     
 if __name__ == '__main__' :
