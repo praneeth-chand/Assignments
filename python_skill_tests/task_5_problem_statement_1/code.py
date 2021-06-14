@@ -14,5 +14,4 @@ def minJumps(arr):
       jump += 1 
       no_of_jumps = max_element_jump - position
   return jump
-arr = [1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9]
-print(minJumps(arr))
+

@@ -7,5 +7,3 @@ def MinimumSumPathTriangle(triangle):
       print(triangle)
       return triangle[0][0]
 
-triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
-print(MinimumSumPathTriangle(triangle))
