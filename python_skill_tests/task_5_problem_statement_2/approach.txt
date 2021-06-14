@@ -1,0 +1,36 @@
+defining input_validation which takes string as parameter:
+	if string is numeric:
+		call function split_input(string)
+	else if string is alpha numeric :
+		return alphanumeric cant be passed
+	else if string is decimal:
+		return decimals cant be passed
+	else no input given:
+		ask for input
+define split_input(sting):
+	intialise result =0
+	intialise result_string = ""
+	iterating iver for loop across the length of string:
+		iterating another for loop in reverse order
+			intialize s = string[i:j+1]
+			find the length of s
+			if the length of s!=0  and its divided by 2:
+				result_1 = check_sum_string(s)
+				if result <res:
+					result_string = s
+					result = result1
+	return result
+define check_sum_string(s):
+	intialise first_half_sum =0
+	intialise second_half_sum = 0
+	find the length of s
+	iterating over length of s:
+		if i is first half element:
+			add into first half sum
+		else:
+			add into secon half sum
+	if first half sum is equal to second half sum:
+		return lenght of s
+	else:
+		return -1
+			
